@@ -1,0 +1,167 @@
+/*<HEADER>*/
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 104px;
+  padding: 30px 0;
+  z-index: 10;
+}
+
+.header._scroll .header__wrapper {
+  background: #162831;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 5;
+}
+/*</HEADER>*/
+
+/*<MENU>*/
+@media (max-width: 767.98px) {
+  .menu__body {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 160px 0 100px 0;
+    transition: all 0.5s ease;
+    background: #018abe;
+    overflow: auto;
+  }
+
+  .menu__body.active {
+    left: 0;
+  }
+
+  .menu__body.active::before {
+    content: "";
+    display: block;
+    height: 140px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #162831;
+  }
+}
+
+.menu__list {
+  display: flex;
+}
+
+@media (max-width: 767.98px) {
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin: 0 50px 0 0;
+}
+
+@media (max-width: 991.98px) {
+  .menu__item:not(:last-child) {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__item:not(:last-child) {
+    margin: 0 0 25px 0;
+  }
+}
+
+.menu__link {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+@media (any-hover: hover) {
+  .menu__link:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__link {
+    font-size: 35px;
+  }
+}
+/*</MENU>*/
+
+/*<ICON-MENU>*/
+.icon-menu {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
+}
+
+.icon-menu span,
+.icon-menu::before,
+.icon-menu::after {
+  width: 100%;
+  height: 10%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.icon-menu span {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.icon-menu::after {
+  bottom: 0;
+  top: auto;
+}
+
+.icon-menu.active span {
+  transform: scale(0);
+}
+
+.icon-menu.active::before {
+  top: 50%;
+  transform: rotate(45deg) translate(0, -50%);
+}
+
+.icon-menu.active::after {
+  bottom: auto;
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: block;
+  }
+}
+/*</ICON-MENU>*/

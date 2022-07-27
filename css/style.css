@@ -1,0 +1,103 @@
+/*<ПОДКЛЮЧЕНИЕ ШРИФТОВ>*/
+@import "./fonts.css";
+/*</ПОДКЛЮЧЕНИЕ ШРИФТОВ>*/
+
+/*<ПОДКЛЮЧЕНИЕ ИКОНОЧНОГО ШРИФТА>*/
+@import "./icons.css";
+/*</ПОДКЛЮЧЕНИЕ ИКОНОЧНОГО ШРИФТА>*/
+/*<NULLSTYLE>*/
+@import "./null.css";
+/*</NULLSTYLE>*/
+
+/*<HEADER>*/
+@import "./header.css";
+/*</HEADER>*/
+
+/*<FOOTER>*/
+@import "./footer.css";
+/*</FOOTER>*/
+
+/*<UI>*/
+@import "./ui.css";
+/*</UI>*/
+
+/*<FIRST-SCREEN>*/
+@import "./first-screen.css";
+/*</FIRST-SCREEN>*/
+
+/*<REVIEWS>*/
+@import "./reviews.css";
+/*</REVIEWS>*/
+
+/*<ABOUT>*/
+@import "./about.css";
+/*</ABOUT>*/
+
+/*<PRICE>*/
+@import "./price.css";
+/*</PRICE>*/
+
+/*<CONTACTS>*/
+@import "./contacts.css";
+/*</CONTACTS>*/
+
+/*<BODY>*/
+body {
+  color: #fff;
+  font-family: ProximaNova;
+  font-size: 14px;
+  background: #162831;
+}
+
+body._lock {
+  overflow: hidden;
+}
+/*</BODY>*/
+
+/*<WRAPPER>*/
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/*</WRAPPER>*/
+
+/*<_CONTAINER>*/
+._container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1308px) {
+  ._container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  ._container {
+    max-width: none;
+    padding: 0 20px;
+  }
+}
+/*</CONTAINER>*/
+
+/*<PAGE>*/
+.page {
+  flex: 1 1 auto;
+  padding: 140px 0 0 0;
+}
+/*</PAGE>*/
+
+/*<SECTION>*/
+.section {
+  padding: 150px 0 0 0;
+}
+/*</SECTION>*/

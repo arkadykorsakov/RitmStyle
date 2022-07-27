@@ -1,0 +1,249 @@
+/*<BTN>*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  min-height: 36px;
+  background: #018abe;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+.btn_w {
+  color: #018abe;
+  background-color: #fff;
+}
+
+@media (any-hover: hover) {
+  .btn:hover {
+    background: #0178a5;
+  }
+
+  .btn_w:hover {
+    background: #ccc;
+  }
+}
+/*</BTN>*/
+
+/*<TITLE>*/
+.title {
+  font-family: "El Messiri";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 140%;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 0 100px 0;
+}
+
+@media (max-width: 991.98px) {
+  .title {
+    margin: 0 0 70px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .title {
+    margin: 0 0 50px 0;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .title {
+    margin: 0 0 30px 0;
+  }
+}
+
+.title_small {
+  font-size: 24px;
+}
+
+.title::before,
+.title::after {
+  display: inline-block;
+  content: "";
+  background: #018abe;
+  width: 28px;
+  height: 14px;
+  border-radius: 0px 50px;
+}
+
+.title_small::before,
+.title_small::after {
+  background: #fff;
+}
+
+.title::before {
+  margin: 0 66px 0 0;
+}
+
+.title::after {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  margin: 0 0 0 66px;
+}
+
+@media (max-width: 479.98px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .title::before,
+  .title::after {
+    width: 18px;
+    height: 9px;
+  }
+
+  .title::before {
+    margin: 0 23px 0 0;
+  }
+
+  .title::after {
+    margin: 0 0 0 23px;
+  }
+}
+/*</TITLE>*/
+
+/*<GALLERY-SERVICES>*/
+.gallery-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 258px);
+  gap: 24px;
+}
+
+.gallery-services__item {
+  display: inline-block;
+  background: url("../img/services/01.png") center/cover no-repeat;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gallery-services__item::before {
+  position: absolute;
+  content: "";
+  background: rgba(1, 138, 190, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-services__item_big {
+  background-position: left top;
+  grid-row: span 2;
+  border-bottom: 7px solid#018ABE;
+}
+
+.gallery-services__item span {
+  position: relative;
+  z-index: 5;
+  font-family: "El Messiri";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #ffffff;
+  padding: 0 0 50px 50px;
+}
+
+@media (max-width: 991.98px) {
+  .gallery-services {
+    grid-template-rows: repeat(4, 258px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-services__item_big {
+    grid-column: span 2;
+    background-position: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-services {
+    grid-template-rows: repeat(5, 516px);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallery-services__item_big {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-position: center;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .gallery-services__item {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-services__item span {
+    text-align: center;
+    padding: 0;
+  }
+
+  .gallery-services {
+    grid-template-rows: repeat(5, 300px);
+  }
+}
+/*</GALLERY-SERVICES>*
+
+/*<LIST-PRICE>*/
+.list-price {
+  flex: 0 0 75%;
+}
+
+@media (max-width: 991.98px) {
+  .list-price {
+    flex: 0 0 100%;
+  }
+}
+
+.list-price__item {
+  padding: 0 0 0 38px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-price__item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: inline-block;
+  content: "";
+  background: #018abe;
+  width: 18px;
+  height: 9px;
+  border-radius: 0px 50px;
+}
+
+.list-price__link {
+  flex: 1 1 auto;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.list-price__price {
+  font-family: "El Messiri";
+  font-size: 18px;
+  margin: 0 0 0 23px;
+}
+
+@media (max-width: 479.98px) {
+  .list-price__link,
+  .list-price__price {
+    font-size: 14px;
+  }
+}
+
+/*</LIST-PRICE>*/
